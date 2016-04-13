@@ -1,0 +1,61 @@
+<section class="container espacio">
+
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2" ng-controller="publiCtrl">
+
+            <form ng-submit="nvaPublicidad()">
+
+                <div class="form-group">
+                    <label>Título</label>
+                    <input type="text" class="form-control" ng-model="nuevaAdd.titulo" required="required">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="nombre">Fecha: </label>                   
+                    <input type="date" 
+                           name="date_control" 
+                           ng-model="nuevaAdd.date"
+                           required="required"/>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label>Agregar nueva imagen</label>
+                    <input type="file" 
+                           name="file"
+                           uploader-model="file"
+                           required="required"/>
+                    <p class="help-block"> Tamaño recomendado 800 x 533px. </p>
+                    <!-- <div class="row">
+                         <div class="col-sm-4">
+                             <img class="previa thumbnail" ng-src="../{{formNota.imagenes}}"/>
+                    <!--<button class="btn btn-danger btn-xs botn" ng-click="" >
+                        <i class="fa fa-trash-o"></i>
+                    </button><br><br>
+                </div> 
+            </div>-->
+                </div>
+                <div class="form-group">
+                    <label>Contenido</label>
+                    <textarea ng-model="nuevaAdd.contenido" class="form-control" rows="4" required="required"></textarea>
+                </div>
+                <br>
+                <!--<div class="form-group">
+                        <input type="file" id="inputfoto">
+                        <p class="help-block"> Tamaño recomendado x px.</p>
+                </div>-->
+                <br>
+                <button type="submit" class="btn btn-info"> Guardar</button>
+           
+                <h4 class="text-info animated fadeIn fast" ng-show="actualizado">Registro realizado  
+                <a href="#/publicidadAdmin"><i class="text-info fa fa-reply-all fa-2x" title="REGRESAR A PUBLICIDAD"></i></a>
+                </h4>
+                
+            </form>            
+
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!-- CONTENIDO -->
+<section class="container espacio">
+    <div class="col-lg-7" >
+        <div class="panel panel-default" ng-controller="noticiaCtrl">
+            <div class="panel-body">
+                <div class="row" >
+                    <div class="col-lg-12">
+
+
+                        <h4 class="titulonota">{{nota.title| uppercase}}</h4>
+                        <!--{{nota|json}}-->
+                    </div> <!-- /.lg-7 -->
+                </div> <!-- /.row -->
+                <br>
+                <div class="row">
+                    <div class="col-lg-12 fecha">
+                        <p>{{nota.fecha}}</p>
+                    </div> <!-- /.lg-7 -->
+                </div> <!-- /.row --> 
+                <br>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div  class="panel panel-default" id="cuadroSlider">
+                            <div class="panel-body">
+
+
+
+
+                                <div class="slider img-responsive">
+                                    <uib-carousel interval="myInterval" no-wrap="noWrapSlides">
+                                        <uib-slide ng-repeat="slide in slider" active="slide.active" index="slide.id">
+                                            <img ng-src="{{slide.rutas}}" id="slider" class="img-responsive" style="width: 100%;">
+                                        </uib-slide>
+                                    </uib-carousel>
+                                </div>
+
+
+                            </div> <!-- /.panel body -->
+
+                            <div class="panel-footer" >
+                                <p>
+                                     {{nota.pie}}
+                                </p>
+                            </div>
+                        </div>
+                    </div> <!-- /.lg-7 -->    
+                </div> <!-- /.row --> 
+                <br>
+                <div class="row">
+                    <div class="col-lg-12 textonoticias">
+                        <p>
+                            {{nota.contenido}}
+                        </p>
+
+
+                    </div> <!-- /.lg-7 -->
+                </div> <!-- /.row -->   
+            </div> <!-- /.panel-body -->    
+        </div> <!-- /.panel -->    
+    </div> <!-- /.lg-7 -->
+
+
+
+    <div ng-include="espacioFace"></div>
+
+    <br><br><br><br>
+
+    <div ng-include="publicidad"></div>
+
+
+</section> <!-- /.Container -->
+<!-- /Contenido -->

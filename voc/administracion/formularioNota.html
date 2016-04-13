@@ -1,0 +1,126 @@
+
+<section class="container espacio">
+
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2" ng-controller="ctrlNoticias">
+
+            <form ng-submit="guardarDatosNoticias()">
+
+                <div class="form-group">
+                    <label>Título:</label>
+                    <input type="text" 
+                           class="form-control" 
+                           ng-model="formNota.titulo" 
+                           placeholder="Título" 
+                           required="required"/>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="nombre">Fecha: </label>                   
+                    <input type="date" 
+                           name="date_control" 
+                           ng-model="formNota.date" 
+                           required="required"/>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label>Agregar nueva imagen</label>
+                    <input type="file" 
+                           name="file"
+                           uploader-model="file"
+                           required="required"/>
+                    <p class="help-block"> Tamaño recomendado 800 x 533px. </p>
+                    <!-- <div class="row">
+                         <div class="col-sm-4">
+                             <img class="previa thumbnail" ng-src="../{{formNota.imagenes}}"/>
+                    <!--<button class="btn btn-danger btn-xs botn" ng-click="" >
+                        <i class="fa fa-trash-o"></i>
+                    </button><br><br>
+                </div> 
+            </div>-->
+                </div>
+                <!--<div class="form-group">
+                    <label>Agregar nueva imagen</label>
+                    <input type="file" 
+                           name="file"
+                           uploader-model="file"
+                           required="required"/>
+                    <p class="help-block"> Tamaño recomendado 800 x 533px. </p>
+                <!-- <div class="row">
+                     <div class="col-sm-4">
+                         <img class="previa thumbnail" ng-src="../{{formNota.imagenes}}"/>
+                <!--<button class="btn btn-danger btn-xs botn" ng-click="" >
+                    <i class="fa fa-trash-o"></i>
+                </button><br><br>
+            </div> 
+        </div>
+            </div>-->
+                <br>
+                <div class="form-group">
+                    <label>Síntesis:</label>
+                    <textarea class="form-control" 
+                              rows="4" 
+                              ng-model="formNota.sintesis" 
+                              placeholder="Síntesis" 
+                              required="required">
+                    </textarea>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label>Contenido:</label>
+                    <textarea class="form-control"
+                              rows="10"
+                              ng-model="formNota.contenido"
+                              placeholder="Contenido"
+                              required="required">
+                    </textarea>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="email">Pie de las fotografías</label>
+                    <textarea class="form-control"
+                              rows="4"
+                              ng-model="formNota.pie"
+                              placeholder="Agregar breve descripción sobre las fotografías"
+                              required="required">
+                    </textarea>
+                </div>
+                <br>
+                <div class="form-group form-inline">
+                    <label>Elige una sección:</label>
+                    <select  
+                        ng-change="cambio()"
+                        ng-model="seccionPrincipal" 
+                        class="form-control" 
+                        ng-options="opt as opt.menus for opt in menu track by opt.idMenus"> 
+                    </select>
+                </div>
+                <br>
+                <div class="form-inline form-group" ng-show="municipio == 2" ng-hide="municipio != 2">
+                    <label>Selecciona el municipio:</label>
+                    <select ng-model="menuSeleccionado"
+                            class="form-control"
+                            ng-options="pbo as pbo.municipio for pbo in pueblos track by pbo.idmunicipio"
+                            ng-init="menuSeleccionado.idmunicipio = idmunicipio[0] = '0'">             
+                    </select>                  
+                    <label>Sección a la que pertenece:</label>
+                    <select ng-model="menusMunSelec" 
+                            class="form-control" 
+                            ng-options="secc as secc.menus for secc in menusMunicipios track by secc.idMenus"
+                            ng-init="menusMunSelec.idMenus = idMenus[0] = '0'">                            
+                    </select>
+                </div> 
+                <br>
+                <br>
+                <button value="enviar" class="btn btn-info"> Guardar</button>
+                
+                <h4 class="text-info animated fadeIn fast" ng-show="actualiza">Registro realizado  
+                <a href="#/noticias"><i class="text-info fa fa-reply-all fa-2x" title="REGRESAR A NOTICIAS"></i></a>
+                </h4>
+                
+            </form>
+        </div>
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<section class="container espacio">
+
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2" ng-controller="videoCtrl">
+
+            <form ng-submit="nvoVideo()">
+
+                <div class="form-group">
+                    <label>Dirección URL</label>
+                    <input type="text"
+                           ng-model="videoNvo.url"
+                           class="form-control"
+                           required="required"/>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label>ID</label>
+                    <input type="text"
+                           ng-model="videoNvo.id"
+                           class="form-control"
+                           required="required"/>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label>Título</label>
+                    <!--<textarea id="edad" class="form-control" rows="2"></textarea> -->
+                    <input type="text"
+                           ng-model="videoNvo.comentario"
+                           class="form-control"
+                           required="required"/>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-info"> Guardar</button>
+                <h4 class="text-info animated fadeIn fast" ng-show="actualizado">Registro realizado  
+                    <a href="#/videos"><i class="text-info fa fa-reply-all fa-2x" title="REGRESAR A VIDEOS"></i></a>
+                </h4>
+
+            </form>            
+
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>

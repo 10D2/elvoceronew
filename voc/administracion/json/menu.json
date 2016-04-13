@@ -1,0 +1,20 @@
+{
+    "menu": [
+        {
+            "idMenus": "2",
+            "menus": "Municipios"
+        }, {
+            "idMenus": "3",
+            "menus": "Pol\u00edtica y Gobierno"
+        }, {
+            "idMenus": "4",
+            "menus": "Polic\u00eda"
+        }, {
+            "idMenus": "5",
+            "menus": "Deportes"
+        }, {
+            "idMenus": "6",
+            "menus": "Espect\u00e1culos"
+        }
+    ]
+}

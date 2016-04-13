@@ -1,0 +1,113 @@
+<!-- CONTENIDO -->
+<section class="container espacio">
+    <div class="col-lg-7" ng-controller="seccionMunicipios" >
+
+        <div class="form-group">
+            <label>Selecciona un municipio</label>
+            <select ng-model="selected" ng-options="opt as opt.municipio for opt in municipios" ng-init="selected = 'Acanceh'"></select>
+            <label>Tienes seleccionado : </label>{{selected.municipio}}
+
+            <div class="btn btn-info" >
+                <a href="#/noticiasMunicipios/{{selected.idmunicipio}}" id="btnmun" title="Buscar"  >
+                    <i class="fa fa-search"></i> 
+                </a>
+            </div>
+        </div>
+        <hr>
+        <div class="panel panel-default">
+            <div class="panel-heading" id="pmunicipios">
+                <h1 class="panel-title"><b>MUNICIPIOS</b></h1>
+
+            </div> <!-- /.panel-heading -->
+
+            <!-- <div><a href="" data-toggle="modal" data-target="#buscar"><p class="busca"><b> Buscar</b> </p> <i class="smuni fa fa-search-plus fa-2x"></i> </a> </div> -->
+
+            <div class="panel-body">
+                <div class="row" ng-repeat="mu in mpios| limitTo: posicion | limitTo: -5">
+                    <div class="col-sm-5">
+                        <img class="imgsintesis" ng-src="{{mu.imagen}}" alt="">
+
+                    </div> <!-- /.sm-4 -->
+                    <div class="col-sm-7">
+
+                        <a href="#/noticia/{{mu.id}}" style="text-decoration: none;"><h4 class="titulosintesis">{{mu.title}}</h4></a>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <p class="fecha">{{mu.fecha}}</p>
+                                <p><b>{{mu.menus}}</b></p>
+                                <p class="sintesis">
+                                    {{mu.sintesis}}
+
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div> <!-- /.sm-8 -->
+                    <hr>
+                </div> <!-- /.row -->
+
+            </div> <!-- /.panel-body -->
+
+
+        </div> <!-- /.panel -->
+        <section class="paginacion">
+            <div class="btn" ng-click="anteriores()"><i class="fa fa-arrow-circle-left fa-3x"></i></div>
+            <div class="btn" ng-click="siguientes()"><i class="fa fa-arrow-circle-right fa-3x"></i></div>
+            <label>{{posicion}} / {{totalNoticias}}</label>
+        </section>
+    </div> <!-- /.lg-7 -->
+    <br>
+    <br>
+    <br>
+    <div ng-include="espacioFace"></div>
+
+    <br><br><br><br>
+
+    <div ng-include="publicidad"></div>  
+
+</section> <!-- /.Container -->
+<!-- /Contenido -->
+
+<br>
+
+
+
+<!-- ENTRADA MODAL -->
+<!--<div class="modal fade" id="buscar">
+    <div class="modal-dialog" ng-controller="mpiosCtrl">   
+        <div id="modalmun" class="modal-content">
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Selecciona un municipio:</label> 
+                    <select ng-model="selected" ng-options="m as opt.municipio for opt in municipios"  ></select>
+                </div> <!-- /.form-group -->
+
+
+<!--<div class="form-group">
+    <label>del día:</label> 
+    <select class="form-horizontal">
+        <option value="1">01-01-2016</option>
+        <option value="2">02-01-2016</option>
+        <option value="3">03-01-2016</option>  
+    </select>
+    <label>al día:</label> 
+    <select class="form-horizontal">
+        <option value="1">04-01-2016</option>
+        <option value="2">05-01-2016</option>
+        <option value="3">06-01-2016</option> 
+    </select>
+
+</div> <!-- /.form-group -->
+
+
+
+<!--  <div class="modal-footer">
+      <div class="btn btn-info " ><a href="#/noticiasMunicipios{{busqueda.idmunicipio}}" id="btnmun"  > Buscar </a></div>
+  </div>
+</div><!-- /.modal-content --> 
+<!--   </div> <!-- /.modal-title-->
+<!--</div><!-- /.modal-fade --> 
+<!-- /Entrada modal -->    
+
+

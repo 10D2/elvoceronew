@@ -1,0 +1,20 @@
+{
+    "menusMunicipios": [
+        {
+            "idMenus": "10001",
+            "menus": "Deportes"
+        }, {
+            "idMenus": "10002",
+            "menus": "Espect\u00e1culos"
+        }, {
+            "idMenus": "10003",
+            "menus": "Gente"
+        }, {
+            "idMenus": "10004",
+            "menus": "Polic\u00eda"
+        }, {
+            "idMenus": "10005",
+            "menus": "Sociales"
+        }
+    ]
+}

@@ -1,0 +1,491 @@
+
+/* == GENERAL == */
+@charset 'UTF-8'; 
+
+body{ 
+    background: white;
+    cursor:default;
+    min-height: 100px;
+}
+.espacio{
+    margin-top: 100px;
+    margin-bottom: 40px;
+} 
+
+/* ** HEAD ** */ 
+#logo{
+    margin-left: 5px;    
+}
+#slogan{ 
+    margin-top:27px;
+    font-family: Century Gothic;
+    font-size:14px;
+    color: white;    
+}
+/* Menu lista */
+#menu{
+    background: none;
+    color: white;
+    border: none;
+}
+.dropdown-menu{
+    display: none;
+    position:absolute;
+    background-color: #222;
+    width: 300px;
+    font-size: 15px;    
+}
+.dropdown-menu a{
+    text-decoration: none;
+    display: block;
+}
+#mu{
+    color: white;
+}
+.dropdown-menu a#mu:hover{
+    background-color: chartreuse;
+    color: black;
+}
+#poygo{
+    color: white;
+}
+.dropdown-menu a#poygo:hover{
+    background-color: #95A5A6;
+    color: black;
+}
+#poli{
+    color: white;
+}
+.dropdown-menu a#poli:hover{
+    background-color: orange;
+    color: black;
+}
+#de{
+    color: white;
+}
+.dropdown-menu a#de:hover{
+    background-color: deepskyblue;
+    color: black;
+}
+#espe{
+    color: white;
+}
+.dropdown-menu a#espe:hover{
+    background-color: deeppink;
+    color: black;
+}
+#pu{
+    color: white;
+}
+.dropdown-menu a#pu:hover{
+    background-color: darkmagenta;
+    color: black;
+}
+#vid{
+    color: white;
+}
+.dropdown-menu a#vid:hover{
+    background-color: yellow;
+    color: black;
+}
+#inicio{
+    color: white;
+}
+.dropdown-menu a#inicio:hover{
+    background-color: white;
+    color: black;
+}
+/* * botones menú * */
+.navbar-right{
+    margin-right: 20px;
+}
+#btnmunicipios:hover{
+    background-color: chartreuse;
+    color:black;
+    padding: 5px;
+    font-size: 11px;
+}
+#btnmunicipios{
+    background-color: #222;
+    color:white;
+    padding: 5px;
+    font-size:11px;
+}
+#btnpolitica:hover{
+    background-color: #95A5A6;
+    color: black;
+    padding: 4px;
+    font-size: 11px;
+    margin-left: 3px;
+}
+#btnpolitica{
+    background-color: #222;
+    color: white;
+    padding: 4px;
+    font-size: 11px;
+    margin-left: 3px;
+}
+#btnpolicia:hover{
+    background-color: orange;
+    color: black;
+    padding: 5px;
+    font-size: 11px;
+    margin-left: 3px;
+}
+#btnpolicia{
+    background-color: #222;
+    color: white;
+    padding: 5px;
+    font-size: 11px;
+    margin-left: 3px;
+}
+#btndeportes:hover{
+    background-color: deepskyblue;
+    color: black;
+    padding: 5px;
+    font-size: 11px;
+    margin-left: 3px;
+}
+#btndeportes{
+    background-color: #222;
+    color: white;
+    padding: 5px;
+    font-size: 11px;
+    margin-left: 3px;
+}
+#btnespectaculos:hover{
+    background-color: deeppink;
+    color: black;
+    padding: 5px;
+    font-size: 11px;
+    margin-left: 3px;
+}
+#btnespectaculos{
+    background-color: #222;
+    color: white;
+    padding: 5px;
+    font-size: 11px;
+    margin-left: 3px;
+}
+#btnpublicidad:hover{
+    background-color: darkmagenta;
+    color: black;
+    padding: 5px;
+    font-size: 11px;
+    margin-left: 3px;
+}
+#btnpublicidad{
+    background-color: #222;
+    color: white;
+    padding: 5px;
+    font-size: 11px;
+    margin-left: 3px;
+}
+#btnvideos:hover{
+    background-color: yellow;
+    color: black;
+    padding: 5px;
+    font-size:11px;
+    margin-left: 3px;
+}
+#btnvideos{
+    background-color: #222;
+    color: white;
+    padding: 5px;
+    font-size: 11px;
+    margin-left: 3px;
+}
+#btnportada:hover{
+    background-color: white;
+    color: black;
+    padding: 5px;
+    font-size:11px;
+    margin-left: 3px;
+}
+#btnportada{
+    background-color: #222;
+    color: white;
+    padding: 5px;
+    font-size: 11px;
+    margin-left: 3px;
+}
+
+/* ** CONTENIDO PORTADA ** */
+/* paneles */
+#pmunicipios{
+    background: chartreuse;
+    color:black;
+}
+#ppolitica{
+    background: #95A5A6;
+    color: black;
+}
+#ppolicia{
+    background: orange;
+    color:black;
+}
+#pdeportes{
+    background: deepskyblue;
+    color: black;
+}
+#pespectaculos{
+    background: deeppink;
+    color: black
+}
+/*.imgportada{
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    align-content: center;
+}*/
+.ptitulonoticias{
+    height: 60px;
+    overflow: hidden;
+    color: #245269;
+}
+.ptxtnoticias{
+    height: 120px;
+    overflow: hidden;
+    text-align: justify;
+}
+.btnleer{
+    text-decoration: none;
+    color: #245269;
+}
+/* thumbnail */
+.pnoticias{
+    border: none;
+}
+/* ** SECCIONES ** */
+.imgsintesis{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 220px;
+    height: 150px;
+    border-radius: 20px;
+}
+.titulosintesis{
+    text-align: justify;
+    max-height: 60px;
+    overflow: hidden;
+    color:black;
+    text-decoration: none;
+}
+.titulosintesis:hover{
+    color: #737373;
+    text-decoration: none;
+}
+.sintesis{
+    text-align: justify;
+    height: 180px;
+    overflow: hidden;
+}
+/* ** FOOTER ** */ 
+#footer{
+    padding: 0px 10px 0px 10px; 
+    background: #222;
+    color: white;
+}
+.red{
+    margin-top: 20px;
+    color: white;
+    background:#95A5A6; 
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    border-radius: 35px;
+    padding: 5px;
+    float: right;
+}
+
+.red.tw:hover{
+    background: #55ACEE;
+}
+.red.fb:hover{
+    background: #3b5998; 
+}
+.red.yt:hover{
+    background: red; 
+}
+.red1{
+    margin-right: 30px;  
+}
+
+/* ** SECCIONES ** */
+#ppublicidad{
+    background: darkmagenta;
+    color: white;
+}
+#pvideos{
+    background: yellow;
+    color: black;
+}
+
+/* ** NOTAS ** */
+.titulonota{
+    color: #245269;
+    text-align: left;
+}
+.fecha{
+    text-align: right;
+    color:black;
+}
+.imgnota{
+    width: 570px;
+    height: 370px;
+    margin: auto;
+
+}
+.textonoticias{
+    text-align: justify;
+}
+/* PUBLICIDAD */
+.imgpublicidad{
+    max-width: 270px;
+    max-height:170px;
+    margin: auto;
+}
+.publicidadnotas{
+    color: white;
+}
+.link{
+    text-decoration: none;
+}
+.imagenesmodal{
+    width: 600px;
+    height: 400px;
+    align-content: center;
+    text-align: center;
+    border-radius: 30px;
+    padding: 20px;
+}
+.textomodal{
+    text-align: center;
+    color: black;
+    max-height: 150px;
+    overflow: hidden;
+    padding: 10px;
+}
+.pagination{
+    float: right; 
+}
+
+#btnmun{
+    float: right;
+    color: white;
+    text-decoration: none;
+
+}
+.smuni{
+    color: black;
+    float: right;
+
+}
+.busca{
+    color: black;
+    float: right;
+    margin-right: 30px;
+}
+.panel-footer{
+    text-align: justify;
+    max-height: 110px;
+    overflow: hidden;
+    border: none;
+    font-size: 12px;
+}
+
+.paginacion{
+    float: right;
+}
+.imgvideos{
+    margin-top: 10px;
+}
+.limit{
+    max-width: 300px;
+    max-height:250px;
+    margin: auto;
+}
+.imgpublico{
+    width: 600px;
+    height: 400px;
+    margin: auto;
+}
+
+
+.titulopublicidad{
+    text-align: center;
+    color: #245269;
+}
+.txtpublicidad{
+    text-align: center;
+}
+
+#slider{
+    margin:auto; height: 280px; width: 400px;
+}
+.slider{
+    margin:auto; height: 280px; width: 400px;
+}
+#cuadroSlider{
+    margin:auto; max-height: 430px; max-width: 440px; 
+}
+
+/* IMAGENES EN PORTADA */
+
+#imgmun{
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+}
+#imggob{
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+}
+#imgpol{
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+}
+#imgdep{
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+}
+#imgesp{
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+
+
+/* ==== CSS ADMINISTRACION ==== */
+.margen{
+    margin-top: 200px;
+}
+.iconos{
+    text-align: center;
+}
+.dropdown-menu{
+    width: 30px;
+}
+.drop{
+    color:white;
+}
+.drop:hover{
+    color:black;
+}
+.link1{
+    text-decoration: none;
+    color:black;
+}
+.ng-cloak {
+    display: none;
+}
+.previa{
+    width: 180px; height: 100px;
+}
+.botn{
+margin-left: 130px;
+}

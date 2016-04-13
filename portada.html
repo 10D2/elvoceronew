@@ -1,0 +1,147 @@
+<!-- CONTENIDO -->
+<section class="container espacio">
+    <div class="col-lg-12">
+
+        <div class="panel panel-default" ng-controller="consultaSecciones">
+            <a href="#/municipios" style="text-decoration: none">
+                <div class="panel-heading" id="pmunicipios">
+                    <h1 class="panel-title"><b>MUNICIPIOS</b></h1>
+                </div>
+            </a>
+            <div class="panel-body">
+                <div class="row">
+
+                    <div class="col-sm-4" ng-repeat="n in noticia">
+                        <div class="thumbnail pnoticias">
+                            <img id="imgmun" ng-src="{{n.imagen}}" alt=""> 
+                            <div class="caption">
+                                <h4 class="ptitulonoticias">{{n.title}}</h4>
+                                <p class="fecha"> {{n.fecha}}</p>
+                                <p><b>{{n.menus}}</b></p>
+                                <p class="ptxtnoticias">
+                                    {{n.sintesis}} 
+                                </p>
+
+                                <p><a href="#/noticia/{{n.id}}" class="btn btn-primary" role="button">Leer más</a> 
+                            </div>
+
+                        </div>
+                    </div> <!-- /.lg-4 -->
+
+
+                </div> <!-- /.row -->
+            </div> <!-- /.panel-body -->
+        </div> <!-- /panel -->
+
+        <div class="panel panel-default" ng-controller="consultaSecciones">
+            <a href="#/politica" style="text-decoration: none;">
+                <div class="panel-heading" id="ppolitica">
+                    <h1 class="panel-title"><b>POLITICA Y GOBIERNO</b></h1>
+                </div>
+            </a>   
+            <div class="panel-body">
+                <div class="row">
+
+                    <div class="col-sm-4" ng-repeat="p in politica">
+                        <div class="thumbnail pnoticias">
+                            <img id="imggob" ng-src="{{p.imagen}}" alt="...">
+                            
+                            <div class="caption">
+                                <h4 class="ptitulonoticias">{{p.title}}</h4>
+                                <p class="fecha">{{p.fecha}}</p>
+                                <p class="ptxtnoticias">
+                                    {{p.sintesis}}
+                                </p>
+                                <p><a href="#/noticia/{{p.id}}" class="btn btn-primary" role="button">Leer más</a> 
+                            </div>
+                        </div>
+                    </div> <!-- /.lg-4 -->
+
+                </div> <!-- /.row -->
+            </div> <!-- /.panel-body -->
+        </div> <!-- /panel -->
+
+        <div class="panel panel-default" ng-controller="consultaSecciones">
+            <a href="#/policia" style="text-decoration: none;">
+                <div class="panel-heading" id="ppolicia">
+                    <h1 class="panel-title"><b>POLICIA</b></h1>
+                </div>
+            </a>    
+            <div class="panel-body">
+                <div class="row">
+
+                    <div class="col-sm-4"  ng-repeat="poli in policia">
+                        <div class="thumbnail pnoticias">
+                            <img id="imgpol" ng-src="{{poli.imagen}}" alt="...">
+                            <div class="caption">
+                                <h4 class="ptitulonoticias">{{poli.title}}</h4>
+                                <p class="fecha">{{poli.fecha}}</p>
+                                <p class="ptxtnoticias">
+                                    {{poli.sintesis}}
+                                </p>
+                                <p><a href="#/noticia/{{poli.id}}" class="btn btn-primary" role="button">Leer más</a> 
+                            </div>
+                        </div>
+                    </div> <!-- /.lg-4 -->
+
+                </div> <!-- /.row -->
+            </div> <!-- /.panel-body -->
+        </div> <!-- /panel -->
+
+        <div class="panel panel-default" ng-controller="consultaSecciones">
+            <a href="#/deportes" style="text-decoration: none;">
+                <div class="panel-heading" id="pdeportes">
+                    <h1 class="panel-title"><b>DEPORTES</b></h1>
+                </div>
+            </a>    
+            <div class="panel-body">
+                <div class="row">
+
+                    <div class="col-sm-4" ng-repeat="dep in deportes">
+                        <div class="thumbnail pnoticias">
+                            <img id="imgdep" ng-src="{{dep.imagen}}" alt="...">
+                            <div class="caption">
+                                <h4 class="ptitulonoticias">{{dep.title}}</h4>
+                                <p class="fecha">{{dep.fecha}}</p>
+                                <p class="ptxtnoticias">
+                                    {{dep.sintesis}}
+                                </p>
+                                <p><a href="#/noticia/{{dep.id}}" class="btn btn-primary" role="button">Leer más</a> 
+                            </div>
+                        </div>
+                    </div> <!-- /.lg-4 -->
+
+                </div> <!-- /.row -->
+            </div> <!-- /.panel-body -->
+        </div> <!-- /panel -->
+
+        <div class="panel panel-default" ng-controller="consultaSecciones">
+            <a href="#/espectaculos" style="text-decoration: none;">
+                <div class="panel-heading" id="pespectaculos">
+                    <h1 class="panel-title"><b>ESPECTACULOS</b></h1>
+                </div>
+            </a>
+            <div class="panel-body">
+                <div class="row">
+
+                    <div class="col-sm-4" ng-repeat="espe in espec">
+                        <div class="thumbnail pnoticias">
+                            <img id="imgesp" ng-src="{{espe.imagen}}" alt="...">
+                            <div class="caption">
+                                <h4 class="ptitulonoticias">{{espe.title}}</h4>
+                                <p class="fecha">{{espe.fecha}}</p>
+                                <p class="ptxtnoticias">
+                                    {{espe.sintesis}}
+                                </p>
+                                <p><a href="#/noticia/{{espe.id}}" class="btn btn-primary" role="button">Leer más</a> 
+                            </div>
+                        </div>
+                    </div> <!-- /.lg-4 -->
+
+                </div> <!-- /.row -->
+            </div> <!-- /.panel-body -->
+        </div> <!-- /panel -->
+
+    </div> <!-- /.lg-12 -->
+</section> <!-- /.container -->
+<!-- /CONTENIDO -->

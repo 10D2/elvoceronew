@@ -1,0 +1,45 @@
+<!-- CONTENIDO -->
+<section class="container espacio">
+    <div class="col-lg-7" ng-controller="seccionPolitica">
+        <div class="panel panel-default" >
+            <div class="panel-heading" id="ppolitica">
+                <h1 class="panel-title"><b>POLITICA Y GOBIERNO</b></h1>
+            </div> <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="row" ng-repeat="gob in gobierno| limitTo: posicion | limitTo: -5">
+                    <div class="col-sm-5">
+                        <img class="imgsintesis" ng-src="{{gob.imagen}}" alt="">
+                    </div> <!-- /.sm-4 -->
+                    <div class="col-sm-7">
+
+                        <a href="#/noticia/{{gob.id}}" style="text-decoration: none;"><h4 class="titulosintesis">{{gob.title}}</h4></a>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <p class="fecha"> {{gob.fecha}}</p>
+                                <p class="sintesis">
+                                    {{gob.sintesis}}
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div> <!-- /.sm-8 -->
+                </div> <!-- /.row -->
+
+            </div> <!-- /.panel-body -->
+        </div> <!-- /.panel -->
+        <section class="paginacion">
+            <div class="btn" ng-click="anteriores()"><i class="fa fa-arrow-circle-left fa-3x"></i></div>
+            <div class="btn" ng-click="siguientes()"><i class="fa fa-arrow-circle-right fa-3x"></i></div>
+            <label>{{posicion}} / {{totalNoticias}}</label>
+        </section>
+    </div> <!-- /.lg-7 -->
+
+    <div ng-include="espacioFace"></div>
+
+    <br><br><br><br>
+
+    <div ng-include="publicidad"></div>
+
+</section> <!-- /.Container -->
+<!-- /Contenido -->
